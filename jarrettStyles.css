@@ -1,0 +1,165 @@
+body {
+	min-width: 980px;
+	font-family: "Microsoft Sans Serif";
+	background-color: #2d3236;
+	color: #ffffff;
+}
+
+#nav a {
+	display: inline-block;
+	border: 2px solid;
+	border-color: #70EBDE;
+	color: #70EBDE;
+	padding: .7em;
+	text-decoration:none;
+	margin-bottom: .7em;
+}
+
+#emailaddress{
+	overflow-wrap: anywhere;
+}
+
+.sections {
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) minmax(0, 12fr) minmax(0, 5fr);
+	gap: 1rem;
+	min-width: 1400px;
+}
+
+.sections > * {
+	min-width: 0;
+}
+
+.sections .techskills {
+	margin: 0 1rem;
+
+}
+
+.techskills ul {
+	list-style: none;
+}
+
+.showMoreTechSkills, .showMoreSoftwareSkills{
+	/*display:none;*/
+	position:relative;
+	max-height: 0;
+	overflow:hidden;
+	transition: max-height 2s ease;
+}
+
+.techskills:hover .showMoreTechSkills,
+.techskills:focus-within .showMoreTechSkills,
+.techskills:hover .showMoreSoftwareSkills {
+	max-height: 300px;
+}
+
+.sections .personal {
+	min-width: 0;
+}
+
+#hideh1{opacity:0;}
+
+
+footer{
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+
+.workhistory td{
+	padding: .2em 1em .3em 0;
+}
+
+
+a:link, a:visited {
+	color: #70EBDE;
+	text-decoration: none;
+}
+
+.object-and-details {
+	display:inline-block;
+	position:relative;
+}
+
+summary {
+	color: #fff;
+	background: #2d3236;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	z-index: 2;
+	border-radius: 50%;
+	background-image: url("https://assets.codepen.io/128034/pause_circle_filled-24px.svg");
+	background-size: 90% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+[open] summary {
+	background-image: url("https://assets.codepen.io/128034/play_circle_filled-24px.svg");
+	box-shadow: 0 0 0 2px #fff;
+}
+
+/*for blink/webkit */
+details summary::-webkit-details-marker {
+	display: none;
+}
+
+/*for firefox*/
+details > summary:first-of-type {
+	list-style: none;
+}
+
+summary + * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	padding: 1rem;
+	padding-top: 3rem;
+	background: #2d3236;
+	color: #fff;
+	overflow-y: auto;
+}
+
+summary + * a {
+	color: #fff;
+}
+
+summary:focus {
+	box-shadow: 0 0 0 0.25rem #aade87;
+	outline: transparent;
+}
+
+.object-and-details-static img{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: visible;
+}
+
+.skilldemos {
+	min-width: 0;
+}
+
+.skilldemos td {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.fundemos {
+	min-width: 0;
+}
+
+.fundemos td {
+	padding-left: 15px;
+	padding-right: 15px;
+}
